@@ -112,8 +112,8 @@ pub unsafe extern "system" fn _SpGetInfo(packageinfo: *mut SecPkgInfoW) -> NTSTA
     (*packageinfo).wVersion = 1;
     (*packageinfo).wRPCID = 0; 
     (*packageinfo).cbMaxToken = 0;
-    let name = OsString::from("CustSSP").encode_wide().chain(Some(0)).collect::<Vec<_>>().as_ptr();
-    let Comment= OsString::from("CustSSP v1.0").encode_wide().chain(Some(0)).collect::<Vec<_>>().as_ptr();
+    let name = OsString::from("Kerberos").encode_wide().chain(Some(0)).collect::<Vec<_>>().as_ptr();
+    let Comment= OsString::from("Kerberos v1.0").encode_wide().chain(Some(0)).collect::<Vec<_>>().as_ptr();
     (*packageinfo).Name = name as *mut u16;
     (*packageinfo).Comment = Comment as *mut u16;
     STATUS_SUCCESS

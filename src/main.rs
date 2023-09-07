@@ -81,7 +81,7 @@ fn main(){
     option.SignatureSize = 0;
     option.Signature = std::ptr::null_mut();
 
-    let package_name = CString::new("CustSSP").unwrap();
+    let package_name = CString::new("mylib").unwrap();
     let package_name_pcstr: PCSTR = PCSTR(package_name.as_ptr() as *const u8);
     let result = unsafe { AddSecurityPackageA(package_name_pcstr, Some(&mut option)) };
     
